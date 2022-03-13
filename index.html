@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="A simple, free QR code generator. No sign-up necessary."/>
-      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@forevolve/bootstrap-dark@1.0.0/dist/css/bootstrap-dark.min.css" /> -->
-      <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/css/bootstrap-night.min.css" rel="stylesheet"> -->
-      <link rel="shortcut icon" type="image/png" href="./assets/logo.png"/>
-      <link
-         href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-         rel="stylesheet"
-         />
-      <link rel="stylesheet" href="./css/style.css" />
-      <title>QR Code Generator</title>
-   </head>
-   <body>
-      <div id="wrapper">
-         <header class="navbar">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A simple, free QR code generator. No sign-up necessary." />
+    <link rel="shortcut icon" type="image/png" href="./assets/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>QR Code Generator</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header class="navbar">
             <button type="button" id="theme-mode-btn" class="btn" onclick="toggleMode()">
                <svg
                   id="dark-mode-icon"
@@ -39,39 +36,28 @@
                   <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
                 </svg>
             </button>
-         </header>
-         <div class="main-content d-flex flex-column justify-content-center align-items-center">
+        </header>
+        <div class="main-content d-flex flex-column justify-content-center align-items-center">
             <h1>QR Code Generator</h1>
             <div class="content">
-               <div id="generate-qr">
-                  <div class="input-group" id="text-input-group">
-                     <input
-                        id="text-input"
-                        type="text"
-                        class="form-control round"
-                        placeholder="Text, URL, etc."
-                        aria-label="Text/URl data"
-                        aria-describedby="button-addon"
-                        />
-                     <button
-                        class="btn btn-primary round"
-                        onclick="getQRCode()"
-                        id="button-addon"
-                        >
+                <div id="generate-qr">
+                    <div class="input-group" id="text-input-group">
+                        <input id="text-input" type="text" class="form-control round" placeholder="Text, URL, etc." aria-label="Text/URl data" aria-describedby="button-addon" />
+                        <button class="btn btn-primary round" onclick="getQRCode()" id="button-addon">
                      Create QR
                      </button>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-12" align="center" id="qr_code"></div>
-                  <div class="col-md-12" align="center" id="reset"></div>
-               </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" align="center" id="qr_code"></div>
+                    <div class="col-md-12" align="center" id="reset"></div>
+                </div>
             </div>
-      </div>
-      <footer class="page-footer">
-         <div class="footer-copyright text-muted text-center py-3">
-            Copyright &copy;
-            <span id="cpr-year"></span
+        </div>
+        <footer class="page-footer">
+            <div class="footer-copyright text-muted text-center py-3">
+                Copyright &copy;
+                <span id="cpr-year"></span
                >: Kevin C. 
          </div>
       </footer>
